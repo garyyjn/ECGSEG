@@ -1,2 +1,0 @@
-# ECGSEG
- Sequencial ECG 
