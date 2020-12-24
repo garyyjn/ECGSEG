@@ -7,3 +7,5 @@ Alot of difficulty is in managing computational costs. Video classification mode
 Here, we use a repeated feature extraction model in conjunction with a sequencial inference model.
 
 Still, optimization is slow and difficult without an imagenet-equivolent transfer base. 
+
+### to use, download ucf kinitics data into its data directory, then run data utils to generate pytorch dataset
