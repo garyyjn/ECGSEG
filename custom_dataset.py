@@ -24,7 +24,6 @@ class kinetics_dataset(Dataset):
         video_matrix = video_matrix[0:150,:,:,:] #here we reshape this video matrix into 5 segments of 30 frames * h * w * colors
         video_matrix = video_matrix.reshape((5,30,240,320,3))
         action = item_row['action']
-
         sample = {'video': video_matrix, 'action':action}
         #sample = {'video_name': video_matrix, 'action':action}
         if self.transform:
