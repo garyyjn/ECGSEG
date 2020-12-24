@@ -8,4 +8,4 @@ Here, we use a repeated feature extraction model in conjunction with a sequencia
 
 Still, optimization is slow and difficult without an imagenet-equivolent transfer base. 
 
-### to use, download ucf kinitics data into its data directory, then run data utils to generate pytorch dataset
+#### to use, download ucf kinitics data into its data directory, then run data utils to generate pytorch dataset
