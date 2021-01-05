@@ -1,6 +1,6 @@
 # ECGSEG
 ## Task: Combine computer vision with sequencial analysis
-Given periodic video data (yearly medical scan, daily survance video), provide classificiation and inference(heart attack % in next 5 years, existence of a crime).
+Given periodic video data (yearly medical scan, daily survance video), provide classification and inference(heart attack % in next 5 years, existence of a crime).
 
 Alot of difficulty is in managing computational costs. Video classification models are already very intensive (3D resnet), how to preform sequencial video classification?
 
