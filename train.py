@@ -28,7 +28,7 @@ model.cuda()
 print('cuda check' + str(next(model.parameters()).is_cuda))
 
 criterion = nn.CrossEntropyLoss()
-optimizer = optim.SGD(model.parameters(), lr=0.1, momentum=0.9)
+optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.8)
 
 auxdict = getauxdict('UCF-101')
 
