@@ -17,7 +17,7 @@ class simple_linear(nn.Module):
         h = self.fc2(h)
         y = self.soft_max(h)
         return y
-
+'''
 class simple_lstm(nn.Module):
     def __init__(self, segment_numbers, segment_features, class_number):
         self.rnn = nn.LSTM(10, 20, 2)
@@ -28,3 +28,4 @@ class simple_lstm(nn.Module):
         x = x.reshape([-1, self.segment_number*self.segment_features])
         output, (hn, cn) = self.rnn(x, (self.h, self.x))
         return output
+'''

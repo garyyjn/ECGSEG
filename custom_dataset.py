@@ -15,7 +15,7 @@ class kinetics_dataset(Dataset):
     def __len__(self):
         return len(self.action_annotations)
 
-    def __getitem__(self, idx, skip_pattern):#todo preprocess videos, currently too slow
+    def __getitem__(self, idx):#todo preprocess videos, currently too slow
         if torch.is_tensor(idx):
             idx = idx.tolist()
         item_row = self.action_annotations.iloc[idx]
@@ -23,8 +23,8 @@ class kinetics_dataset(Dataset):
         video_matrix = self.video2matrix(path = os.path.join(self.video_dir, video_name))
         video_matrix = video_matrix[0:150,:,:,:] #here we reshape this video matrix into 5 segments of 30 frames * h * w * colors
         video_matrix = video_matrix.reshape((5,30,240,320,3))
-        if skip_pattern:
-            video_matrix = video_matrix[:,skip_pattern,:,:,:]
+        #if skip_pattern:
+           # video_matrix = video_matrix[:,skip_pattern,:,:,:]
         action = item_row['action']
         sample = {'video': video_matrix, 'action':action}
         #sample = {'video_name': video_matrix, 'action':action}
